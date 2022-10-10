@@ -1,9 +1,12 @@
 <div class="row pt-5 text-center">
     <div class="col-12">
-        <button class="btn btn-success btn-lg">Tirar dados</button>
+        <button class="btn btn-success btn-lg shadow" (click) = "tirarDados()">Tirar dados</button>
     </div>
     <div class="col-12">
-        <img class="m-4 bg-danger rounded-4" src="../assets/img/dice1.png" alt="">
-        <img class="m-4 bg-danger rounded-4" src="../assets/img/dice4.png" alt="">
+        <img class="m-4 bg-danger rounded-4 shadow" [src]="dadoIzquierdo" alt="">
+        <img class="m-4 bg-danger rounded-4 shadow" [src]="dadoDerecho" alt="">
+    </div>
+    <div class="col-12 d-flex justify-content-center" *ngIf="num1 === num2">
+        <p class="bg-danger px-5 py-4 text-white rounded-5 shadow h1 border border-5">GaNASTE</p>
     </div>
 </div>
